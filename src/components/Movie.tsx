@@ -25,7 +25,7 @@ const Movie = ({ item }: props) => {
       setLike(!like);
       setSaved(true);
       await updateDoc(movieID, {
-        saveShows: arrayUnion({
+        savedShows: arrayUnion({
           id: item.id,
           title: item.title,
           img: item.backdrop_path,

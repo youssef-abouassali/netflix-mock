@@ -16,7 +16,7 @@ interface tools {
 const Movie = ({ item }: props) => {
   const [like, setLike] = useState(false);
   const [saved, setSaved] = useState(false);
-  const { user } = UserAuth();
+  const { user }: any = UserAuth();
 
   const movieID = doc(db, "users", `${user?.email}`);
 

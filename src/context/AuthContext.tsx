@@ -37,11 +37,8 @@ export function AuthContextProvider({ children }: any) {
     };
   }, []);
 
-  return (
-    <AuthContext.Provider value={{ signUp, logIn, logOut, user }}>
-      {children}
-    </AuthContext.Provider>
-  );
+  const values: any = { signUp, logIn, logOut, user };
+  return <AuthContext.Provider value={values}>{children}</AuthContext.Provider>;
 }
 
 export function UserAuth() {

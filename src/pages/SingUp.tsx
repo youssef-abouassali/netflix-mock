@@ -5,7 +5,7 @@ import { useState } from "react";
 const SingUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { user, signUp } = UserAuth();
+  const { user, signUp }: any = UserAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e: any) => {
@@ -49,7 +49,7 @@ const SingUp = () => {
                   placeholder="Password"
                   autoComplete="current-password"
                 />
-                <button className="bg-red-600 py-3 my-6 rounded font-bold ">
+                <button className="bg-blue-400 py-3 my-6 rounded font-bold ">
                   Sing Up
                 </button>
                 <div className="flex justify-between items-center rext-sm text-gray-600">

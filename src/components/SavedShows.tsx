@@ -6,8 +6,8 @@ import { updateDoc, doc, onSnapshot } from "firebase/firestore";
 import { AiOutlineClose } from "react-icons/ai";
 
 const SavedShows = () => {
-  const [movies, setMovies] = useState([]);
-  const { user } = UserAuth();
+  const [movies, setMovies] = useState<any[]>([]);
+  const { user }: any = UserAuth();
 
   const slideLeft = () => {
     var slider = document.getElementById("slider");

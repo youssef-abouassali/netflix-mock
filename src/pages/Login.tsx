@@ -10,7 +10,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const { user, logIn } = UserAuth();
+  const { user, logIn }: any = UserAuth();
   const navigate = useNavigate();
 
   const handleSubmit = async (e: any) => {
@@ -20,7 +20,7 @@ const Login = () => {
       await logIn(email, password);
 
       navigate("/");
-    } catch (error) {
+    } catch (error: any) {
       console.log(error);
       setError(error.message);
     }
@@ -58,7 +58,7 @@ const Login = () => {
                   placeholder="Password"
                   autoComplete="current-password"
                 />
-                <button className="bg-red-600 py-3 my-6 rounded font-bold ">
+                <button className="bg-blue-400 py-3 my-6 rounded font-bold ">
                   Sing In
                 </button>
                 <div className="flex justify-between items-center rext-sm text-gray-600">
